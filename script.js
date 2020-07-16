@@ -46,6 +46,23 @@ $('.stop-clicking').css('background-color','hsl(0, 0%, 0%, 50%)');
 $('.radiopopup').css('visibility','visible');
 $('.radiopopup').css('opacity','1');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 50%)');
+
+
+
+    var txtFile = new XMLHttpRequest();
+    var allText = "file not found";
+    txtFile.onreadystatechange = function () {
+        if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+            allText = txtFile.responseText;
+            allText = allText.split("\n").join("<br>");
+        }
+
+        document.getElementById('radiotitle').innerHTML = allText;
+    }
+    txtFile.open("GET", 'http://109.169.15.20:17000/currentsong?sid=1.txt', true);
+    txtFile.send(null);
+
+
 }
 
 // call this to Enable
@@ -57,9 +74,5 @@ $('.stop-clicking').css('background-color','hsl(0, 0%, 0%, 0%)');
 $('.radiopopup').css('visibility','hidden');
 $('.radiopopup').css('opacity','0');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 0%)');
-}
- var tempDiv = $('#tempDiv');
- tempDiv.load("http://109.169.15.20:17000/currentsong?sid=1.txt");
- var html = tempDiv.html();
- $('#radiotitle').html(html);
+}
 
