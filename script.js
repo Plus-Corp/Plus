@@ -7,7 +7,7 @@ function parallax() {
   //alert(yPos);
 }
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function(){ 
 	parallax();	
 });
 
