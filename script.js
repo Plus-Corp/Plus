@@ -1,3 +1,5 @@
+var audio = new Audio();
+
 function parallax() {
 	var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/15;	
@@ -39,43 +41,83 @@ var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewh
 
 // call this to Disable
 function disableScroll() {
+
 $('body').addClass('stop-scrolling')
+$('.blur').css('filter','blur(4px)');
 $('.stop-clicking').css('visibility','visible');
 $('.stop-clicking').css('opacity','1');
 $('.stop-clicking').css('background-color','hsl(0, 0%, 0%, 50%)');
 $('.radiopopup').css('visibility','visible');
 $('.radiopopup').css('opacity','1');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 50%)');
+	audio.src = "http://109.169.15.20:17000/stream.mp3";
+	audio.crossOrigin = "anonymous";
+	audio.play();
+    var context = new AudioContext();
+    var src = context.createMediaElementSource(audio);
+    var analyser = context.createAnalyser();
 
+    var canvas = document.getElementById("canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
 
+    src.connect(analyser);
+    analyser.connect(context.destination);
 
-var storedText;
+    analyser.fftSize = 256;
 
-fetch('https://fiddle.jshell.net/robots.txt')
-  .then(function(response) {
-    response.text().then(function(text) {
-      storedText = text;
-      done();
-    });
-  });
+    var bufferLength = analyser.frequencyBinCount;
+    console.log(bufferLength);
 
-function done() {
-  document.getElementById('log').textContent =
-    "Here's what I got! \n" + storedText;
-}
+    var dataArray = new Uint8Array(bufferLength);
 
+    var WIDTH = canvas.width;
+    var HEIGHT = canvas.height;
 
+    var barWidth = (WIDTH / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
 
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+
+      x = 0;
+
+      analyser.getByteFrequencyData(dataArray);
+
+	  var gradient = ctx.createLinearGradient(0, 0, 0, HEIGHT);
+	  gradient.addColorStop(0, '#222');
+	  gradient.addColorStop(1, '#000');
+	  ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      for (var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i];
+
+        var r = 0;
+        var g = barHeight + (250 * (i / bufferLength));
+        var b = barHeight + (150 * (i / bufferLength));
+
+        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
+      }
+    }
+
+    renderFrame();
 }
 
 // call this to Enable
 function enableScroll() {
 $('body').removeClass('stop-scrolling')
+$('.blur').css('filter','blur(0px)');
 $('.stop-clicking').css('visibility','hidden');
 $('.stop-clicking').css('opacity','0');
 $('.stop-clicking').css('background-color','hsl(0, 0%, 0%, 0%)');
 $('.radiopopup').css('visibility','hidden');
 $('.radiopopup').css('opacity','0');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 0%)');
+audio.pause();
 }
-
