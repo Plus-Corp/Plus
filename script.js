@@ -49,18 +49,21 @@ $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 50%)');
 
 
 
-    var txtFile = new XMLHttpRequest();
-    var allText = "file not found";
-    txtFile.onreadystatechange = function () {
-        if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
-            allText = txtFile.responseText;
-            allText = allText.split("\n").join("<br>");
-        }
+var storedText;
 
-        document.getElementById('radiotitle').innerHTML = allText;
-    }
-    txtFile.open("GET", 'http://109.169.15.20:17000/currentsong?sid=1.txt', true);
-    txtFile.send(null);
+fetch('https://fiddle.jshell.net/robots.txt')
+  .then(function(response) {
+    response.text().then(function(text) {
+      storedText = text;
+      done();
+    });
+  });
+
+function done() {
+  document.getElementById('log').textContent =
+    "Here's what I got! \n" + storedText;
+}
+
 
 
 }
