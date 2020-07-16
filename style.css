@@ -348,9 +348,9 @@ color:#0494d4;
 }
 
 .profil-img {
-
+	
   top:330px;
-  left:400px;
+  right:120%;
   width: 300px;
   height: 300px;
   display:inherit;
