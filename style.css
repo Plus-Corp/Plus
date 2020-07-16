@@ -62,10 +62,12 @@ animation-duration: 2s;
 
 position: absolute;
 color:black;
-width:1000px;
+width:50%;
 height:650px;
 background: url(images/Logo_ECO_PLUS_V2.png);
 background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -76,11 +78,12 @@ animation-duration: 4s;
 
 position: absolute;
 color:black;
-top: 450px;
-left: 400px;
-width:400px;
-height:400px;
+width:50%;
+height:650px;
 background: url(images/POWERpluslogo.webp);
+background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -89,13 +92,14 @@ animation-duration: 4s;
 
 .engineplus {
 
-left: 400px;
 position: absolute;
 color:black;
-width:430px;
+width:50%;
 height:650px;
 background: url(images/EnginePlusLogo.webp);
 background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -104,13 +108,14 @@ animation-duration: 4s;
 
 .animeplus {
 
-left: 350px;
 position: absolute;
 color:black;
-width:550px;
+width:50%;
 height:650px;
 background: url(images/animeplus_full.webp);
 background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -119,13 +124,14 @@ animation-duration: 4s;
 
 .radioplus {
 
-left: 350px;
 position: absolute;
 color:black;
-width:680px;
+width:50%;
 height:650px;
 background: url(images/radioplus.webp);
 background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -134,13 +140,14 @@ animation-duration: 4s;
 
 .eventplus {
 
-left: 350px;
 position: absolute;
 color:black;
-width:680px;
+width:50%;
 height:650px;
 background: url(images/eventplus.webp);
 background-size:auto 100%;
+background-repeat:no-repeat;
+background-position-x:50%;
  z-index:1;
 animation-name: appear4;
 animation-duration: 4s;
@@ -205,9 +212,10 @@ height:650px;
 font-family: 'Raleway', sans-serif;
 margin: 0 auto;  
 width:60%;
-height:50%;
+height:100%;
 animation-name: appear1;
 animation-duration: 4s;
+vertical-align: middle;
 	
 }
 
@@ -236,7 +244,7 @@ height:500px;
 
 position: relative;
 font-family: 'Raleway', sans-serif;
-margin: 22% auto;  
+margin: 0 auto;  
 width:60%;
 height:80%;
 animation-name: appear2;
@@ -255,7 +263,7 @@ font-size:72px;
 }
 
 .plusengineanddescription {
-height:25%;
+height:650px;
 box-shadow: inset 0px 200px 83px -147px rgba(0,0,0,1);
 }
 
@@ -313,6 +321,8 @@ animation-duration: 2s;
 
 position: relative;
 background-color:#101010;
+font-family: 'Raleway', sans-serif;
+top: 500px;
 color:white;
 width:100%;
 height:500px;
@@ -324,14 +334,14 @@ animation-duration: 2s;
 .pluscrew2 {
 
 position: relative;
-font-family: 'Raleway', sans-serif;
-margin: 22% auto;  
-width:20%;
+font-family: 'Raleway', sans-serif;  
+left:40%;
+width:60%;
 height:80%;
 	
 }
 
-.pluscrew2 h1 {
+.pluscrew h1 {
 
 text-align: center;
 font-size:72px;
@@ -350,7 +360,7 @@ color:#0494d4;
 .profil-img {
 	
   top:330px;
-  right:120%;
+  right:105%;
   width: 300px;
   height: 300px;
   display:inherit;
@@ -370,7 +380,7 @@ font-family: 'Raleway', sans-serif;
 
 .plusinfo {
 	
-top:2000px;
+top:2350px;
 position: relative;
 background-color:#050505;
 color:white;
