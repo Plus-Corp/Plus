@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@100&display=swap');
+body {
+background-color:#101010;
+margin:5px 0;
+}
+
+.topmenu p,a {
+display:inline;
+color:#c0c0c0;
+text-decoration:none;
+position: relative;
+text-align: center;
+padding: 0px 5px;
+transition: all 0.25s ease-out;
+}
+
+.topmenu p:hover {
+color:#ffffff;
+font-size:17px;
+}
+
+.topmenu {
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+margin:60px 0;
+animation-name: appear3;
+animation-duration: 2s;
+}
+
+.titlelogo {
+margin: 0 auto;  
+width: 90em;
+width:346px;
+height:186px;
+animation-name: appear3;
+animation-duration: 2s;
+}
+
+@keyframes appear1 {
+  0%   {opacity: 0;transform: translate(0px, 100px);}
+  100%   {opacity: 1;transform: translate(0px, 0px);}
+}
+
+
+@keyframes appear2 {
+  0%   {opacity: 0;transform: translate(-800px, 0px);}
+  100%   {opacity: 1;transform: translate(0px, 0px);}
+}
+
+@keyframes appear3 {
+  0%   {opacity: 0;transform: translate(0px, -400px);}
+  100%   {opacity: 1;transform: translate(0px, 0px);}
+}
+
+@keyframes appear4 {
+  0%   {opacity: 0;}
+  100%   {opacity: 1;}
+}
+
+
+.ecoplus {
+
+position: absolute;
+color:black;
+width:1000px;
+height:650px;
+background: url(images/Logo_ECO_PLUS_V2.png);
+background-size:auto 100%;
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.powerplus {
+
+position: absolute;
+color:black;
+top: 450px;
+left: 400px;
+width:400px;
+height:400px;
+background: url(images/POWERpluslogo.webp);
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.engineplus {
+
+left: 400px;
+position: absolute;
+color:black;
+width:430px;
+height:650px;
+background: url(images/EnginePlusLogo.webp);
+background-size:auto 100%;
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.animeplus {
+
+left: 350px;
+position: absolute;
+color:black;
+width:550px;
+height:650px;
+background: url(images/animeplus_full.webp);
+background-size:auto 100%;
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.radioplus {
+
+left: 350px;
+position: absolute;
+color:black;
+width:680px;
+height:650px;
+background: url(images/radioplus.webp);
+background-size:auto 100%;
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.eventplus {
+
+left: 350px;
+position: absolute;
+color:black;
+width:680px;
+height:650px;
+background: url(images/eventplus.webp);
+background-size:auto 100%;
+ z-index:1;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.buttondiscord p {
+	
+color: #0494d4;
+	
+}
+
+.buttondiscord > p {
+	
+background-color: #101010;
+border: solid 1px;
+border-color: hsl(198, 96%, 42%);
+height:50px;
+width: 230px;
+border-radius: 100px;
+transition: all 0.25s ease-out;
+	
+}
+
+.buttondiscord:hover > p {
+	
+background-color: #0494d4;
+height:50px;
+width: 230px;
+border-radius: 100px;
+color:white;
+	
+}
+
+.engine {
+
+position: absolute;
+color:black;
+width:50%;
+height:650px;
+background: url(images/engine.png);
+background-attachment: fixed;
+background-position-y:80%;
+ z-index:-5;
+animation-name: appear4;
+animation-duration: 4s;
+
+}
+
+.plusdescription {
+
+position: absolute;
+color:#0494d4;
+right:0;
+width:50%;
+height:650px;
+
+}
+
+.plusdescription2 {
+
+font-family: 'Raleway', sans-serif;
+margin: 0 auto;  
+width:60%;
+height:50%;
+animation-name: appear1;
+animation-duration: 4s;
+	
+}
+
+.plusdescription2 h1 {
+
+font-size:72px;
+
+}
+
+.plusdescription2 h2,p {
+
+color:white;
+
+}
+
+.plusabout {
+
+position: relative;
+background-color:#0494d4;
+color:white;
+width:100%;
+height:500px;
+
+}
+.plusabout2 {
+
+position: relative;
+font-family: 'Raleway', sans-serif;
+margin: 22% auto;  
+width:60%;
+height:80%;
+animation-name: appear2;
+animation-duration: 4s;
+	
+}
+
+.plusabout2 h1 {
+
+font-size:72px;
+
+}
+
+.plusabout2 h2,p {
+
+}
+
+.plusengineanddescription {
+height:25%;
+box-shadow: inset 0px 200px 83px -147px rgba(0,0,0,1);
+}
+
+.plusaboutmenu p,a {
+display:inline;
+color:#c0c0c0;
+text-decoration:none;
+position: relative;
+text-align: center;
+padding: 0px 5px;
+transition: all 0.25s ease-out;
+}
+
+.plusaboutmenu p:hover {
+color:#ffffff;
+}
+
+.plusaboutmenu {
+font-family: 'Raleway', sans-serif;
+margin:60px 0;
+}
+
+.pluspollution {
+position: absolute;
+color:black;
+width:100%;
+height:650px;
+background: url(images/pollution.png);
+background-attachment: fixed;
+background-position-y:90%;
+ z-index:-5;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+animation-name: appear4;
+animation-duration: 2s;
+
+}
+
+.pluspollution2 {
+font-size:22px;
+font-family: 'Montserrat', sans-serif;
+text-shadow: 0px 0px 5px #000000,0px 0px 5px #000000,0px 0px 5px #000000;
+text-align: center;
+position: absolute;
+width:100%;
+height:650px;
+animation-name: appear4;
+animation-duration: 2s;
+}
+
+.pluscrew {
+
+position: relative;
+background-color:#101010;
+color:white;
+width:100%;
+height:500px;
+animation-name: appear2;
+animation-duration: 2s;
+
+}
+
+.pluscrew2 {
+
+position: relative;
+font-family: 'Raleway', sans-serif;
+margin: 22% auto;  
+width:20%;
+height:80%;
+	
+}
+
+.pluscrew2 h1 {
+
+text-align: center;
+font-size:72px;
+color:#0494d4;
+
+}
+
+.pluscrew2 h2,p {
+
+}
+
+.pluscrew2 h2 {
+color:#0494d4;
+}
+
+.profil-img {
+
+  top:330px;
+  left:400px;
+  width: 300px;
+  height: 300px;
+  display:inherit;
+position: absolute;
+font-family: 'Raleway', sans-serif;
+	
+}
+
+.profil-img img {
+
+  box-shadow: 3px 3px 3px #000000;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+	
+}
+
+.plusinfo {
+	
+top:2000px;
+position: relative;
+background-color:#050505;
+color:white;
+width:100%;
+height:200px;
+text-align:center
+	
+}
+
+.plusinfo2 {
+	
+position: relative;
+line-height: 10px;
+font-family: 'Raleway', sans-serif;
+font-size:12px;
+margin: 0 auto;  
+width:20%;
+height:80%;
+	
+}
