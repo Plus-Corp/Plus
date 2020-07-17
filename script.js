@@ -50,7 +50,7 @@ $('.stop-clicking').css('background-color','hsl(0, 0%, 0%, 50%)');
 $('.radiopopup').css('visibility','visible');
 $('.radiopopup').css('opacity','1');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 50%)');
-	audio.src = "http://109.169.15.20:17000/stream.mp3";
+	audio.src = "http://78.129.150.144:23602/stream.mp3";
 	audio.crossOrigin = "anonymous";
 	audio.play();
     var context = new AudioContext();
