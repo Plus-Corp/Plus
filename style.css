@@ -319,7 +319,36 @@ height:50px;
 width: 230px;
 border-color: hsl(0, 0%, 0%);
 border-radius: 100px;
-color:white;
+color:#0494d4;
+	
+}
+
+.buttondiscord2 a p {
+	
+color: black;
+	
+}
+
+.buttondiscord2 > a > p {
+	
+background-color: #0494d4;
+border: solid 1px;
+border-color: hsl(0, 0%, 0%);
+height:50px;
+width: 230px;
+border-radius: 100px;
+transition: all 0.25s ease-out;
+	
+}
+
+.buttondiscord2:hover > a > p {
+	
+background-color: #101010;
+height:50px;
+width: 230px;
+border-color: hsl(198, 96%, 42%);
+border-radius: 100px;
+color:#0494d4;
 	
 }
 
