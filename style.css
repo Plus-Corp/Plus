@@ -41,10 +41,86 @@ font-family: 'Raleway', sans-serif;
 	
 }
 
+.songbar {
+	position:absolute;
+	-webkit-animation:linear marqueelike 20s infinite ;
+	-moz-animation:linear marqueelike 20s infinite ;
+	-o-animation:linear marqueelike 20s infinite ;
+	-ms-animation:linear marqueelike 20s infinite ;
+	animation:linear marqueelike 20s infinite ;
+}
+
+@-webkit-keyframes marqueelike {
+	0%, 100% {margin-left:-100%;}
+	99.99% {margin-left:50%;}
+ }
+@-moz-keyframes marqueelike {
+	0%, 100% {margin-left:-100%;}
+	99.99% {margin-left:50%;}
+ }
+@-o-keyframes marqueelike {
+	0%, 100% {margin-left:-100%;}
+	99.99% {margin-left:50%;}
+ }
+@-ms-keyframes marqueelike {
+	0%, 100% {margin-left:-100%;}
+	99.99% {margin-left:50%;}
+ }
+@keyframes marqueelike {
+	0%, 100% {margin-left:-100%;}
+	99.99% {margin-left:50%;}
+ }
+ 
+ 
+ 
+ 
+.songbar2 {
+	position:absolute;
+	-webkit-animation:linear marqueelike2 25s infinite ;
+	-moz-animation:linear marqueelike2 25s infinite ;
+	-o-animation:linear marqueelike2 25s infinite ;
+	-ms-animation:linear marqueelike2 25s infinite ;
+	animation:linear marqueelike2 25s infinite ;
+}
+
+.songname3 {
+	
+position:absolute;
+left:43%;
+top:0%;
+font-size:20px;
+font-family: 'Raleway', sans-serif;
+	
+}
+
+@-webkit-keyframes marqueelike2 {
+	0%, 100% {margin-left:-200%;}
+	99.99% {margin-left:50%;}
+ }
+@-moz-keyframes marqueelike2 {
+	0%, 100% {margin-left:-200%;}
+	99.99% {margin-left:50%;}
+ }
+@-o-keyframes marqueelike2 {
+	0%, 100% {margin-left:-200%;}
+	99.99% {margin-left:50%;}
+ }
+@-ms-keyframes marqueelike2 {
+	0%, 100% {margin-left:-200%;}
+	99.99% {margin-left:50%;}
+ }
+@keyframes marqueelike2 {
+	0%, 100% {margin-left:-200%;}
+	99.99% {margin-left:50%;}
+ }
+ 
+ 
+ 
 .crossradio {
 	
   font-size:50px;
   text-align:right;
+  margin-top:-10px;
   vertical-align:top;
 	
 }
@@ -218,13 +294,13 @@ animation-duration: 4s;
 
 }
 
-.buttondiscord p {
+.buttondiscord a p {
 	
 color: #0494d4;
 	
 }
 
-.buttondiscord > p {
+.buttondiscord > a > p {
 	
 background-color: #101010;
 border: solid 1px;
@@ -236,11 +312,12 @@ transition: all 0.25s ease-out;
 	
 }
 
-.buttondiscord:hover > p {
+.buttondiscord:hover > a > p {
 	
 background-color: #0494d4;
 height:50px;
 width: 230px;
+border-color: hsl(0, 0%, 0%);
 border-radius: 100px;
 color:white;
 	

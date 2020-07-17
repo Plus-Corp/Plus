@@ -121,3 +121,19 @@ $('.radiopopup').css('opacity','0');
 $('.radiopopup').css('background-color','hsl(0, 0%, 0%, 0%)');
 audio.pause();
 }
+
+
+
+
+
+
+
+
+function refresh() {
+
+}
+ 
+setInterval(function(){  
+console.log("a");
+$('iframe').attr("src", "http://78.129.150.144:23602/currentsong?sid=1" );
+ }, 3000);
